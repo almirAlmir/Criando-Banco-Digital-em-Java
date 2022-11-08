@@ -1,8 +1,8 @@
 package bedroomBank;
 
-public class Conta {
+public abstract class Conta {
 	
-	private int agencia;
+	private final int agencia;
 	private String numeroConta;
 	private Cliente titular;
 	private double saldo;
@@ -54,6 +54,12 @@ public class Conta {
 		
 		c.depositar(valor);
 		}
+	}
+
+	@Override
+	public String toString() {
+		return "Conta [agencia=" + agencia + ", numeroConta=" + numeroConta + ", titular=" + titular.getNome() + ", saldo="
+				+ saldo + "]";
 	}
 	
 	
